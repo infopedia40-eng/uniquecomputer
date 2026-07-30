@@ -1,0 +1,639 @@
+<!DOCTYPE html>
+<html lang="bn">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Unique Computer - Your Trusted Tech & Print Partner</title>
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Hind+Siliguri:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <!-- FontAwesome for Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Hind Siliguri', sans-serif;
+        }
+
+        body {
+            background-color: #f8f9fa;
+            color: #333;
+        }
+
+        /* Top Bar / Header */
+        header {
+            background: #ffffff;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        .nav-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 15px 20px;
+        }
+
+        .logo {
+            font-size: 22px;
+            font-weight: 700;
+            color: #0056b3;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .logo i {
+            color: #0056b3;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 25px;
+            list-style: none;
+            align-items: center;
+        }
+
+        .nav-links a {
+            text-decoration: none;
+            color: #333;
+            font-weight: 600;
+            font-size: 15px;
+            transition: 0.3s;
+        }
+
+        .nav-links a:hover {
+            color: #0056b3;
+        }
+
+        .quote-btn {
+            background: #0056b3;
+            color: white !important;
+            padding: 10px 20px;
+            border-radius: 4px;
+            text-transform: uppercase;
+            font-size: 14px !important;
+        }
+
+        .quote-btn:hover {
+            background: #004085;
+        }
+
+        /* Hero Section */
+        .hero {
+            position: relative;
+            background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?auto=format&fit=crop&w=1400&q=80') no-repeat center center/cover;
+            color: white;
+            padding: 90px 20px;
+        }
+
+        .hero-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            gap: 40px;
+        }
+
+        .hero-text {
+            max-width: 600px;
+        }
+
+        .hero-text h1 {
+            font-size: 38px;
+            line-height: 1.3;
+            margin-bottom: 20px;
+            font-weight: 700;
+        }
+
+        .hero-text p {
+            font-size: 16px;
+            margin-bottom: 30px;
+            opacity: 0.9;
+        }
+
+        .hero-btns {
+            display: flex;
+            gap: 15px;
+        }
+
+        .btn-primary {
+            background: #0056b3;
+            color: white;
+            padding: 12px 25px;
+            border-radius: 4px;
+            text-decoration: none;
+            font-weight: 600;
+            transition: 0.3s;
+        }
+
+        .btn-primary:hover {
+            background: #004085;
+        }
+
+        .btn-outline {
+            background: white;
+            color: #333;
+            padding: 12px 25px;
+            border-radius: 4px;
+            text-decoration: none;
+            font-weight: 600;
+            transition: 0.3s;
+        }
+
+        .btn-outline:hover {
+            background: #f1f1f1;
+        }
+
+        .hero-image-box {
+            background: white;
+            padding: 15px;
+            border-radius: 8px;
+            box-shadow: 0 10px 25px rgba(0,0,0,0.3);
+            text-align: center;
+            color: #333;
+            max-width: 320px;
+        }
+
+        .hero-image-box img {
+            width: 100%;
+            border-radius: 4px;
+            height: 200px;
+            object-fit: cover;
+        }
+
+        /* Core Services Section */
+        .section-title {
+            text-align: center;
+            font-size: 30px;
+            margin: 60px 0 40px;
+            font-weight: 700;
+            color: #222;
+            text-transform: uppercase;
+        }
+
+        .services-grid {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 25px;
+            padding: 0 20px;
+        }
+
+        .service-card {
+            background: white;
+            border: 1px solid #e0e0e0;
+            border-radius: 8px;
+            padding: 30px;
+            text-align: center;
+            transition: 0.3s;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.02);
+        }
+
+        .service-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 15px rgba(0,0,0,0.08);
+            border-color: #0056b3;
+        }
+
+        .service-card i {
+            font-size: 45px;
+            color: #0056b3;
+            margin-bottom: 20px;
+        }
+
+        .service-card h3 {
+            font-size: 20px;
+            margin-bottom: 10px;
+            color: #222;
+        }
+
+        .service-card p {
+            color: #666;
+            font-size: 14px;
+            margin-bottom: 20px;
+        }
+
+        .learn-more {
+            color: #0056b3;
+            text-decoration: none;
+            font-weight: 700;
+            font-size: 14px;
+            letter-spacing: 0.5px;
+        }
+
+        .learn-more:hover {
+            text-decoration: underline;
+        }
+
+        /* Why Choose Us Section */
+        .why-us {
+            background: #ffffff;
+            margin-top: 60px;
+            padding: 60px 20px;
+            border-top: 1px solid #eee;
+            border-bottom: 1px solid #eee;
+        }
+
+        .features-grid {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            gap: 30px;
+            text-align: center;
+        }
+
+        .feature-item i {
+            font-size: 35px;
+            color: #0056b3;
+            margin-bottom: 15px;
+        }
+
+        .feature-item h4 {
+            font-size: 16px;
+            margin-bottom: 8px;
+            text-transform: uppercase;
+        }
+
+        .feature-item p {
+            font-size: 13px;
+            color: #666;
+        }
+
+        /* Featured Projects Section */
+        .projects-grid {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+            gap: 20px;
+            padding: 0 20px 60px;
+        }
+
+        .project-img {
+            background: #ddd;
+            border-radius: 8px;
+            overflow: hidden;
+            height: 180px;
+        }
+
+        .project-img img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: 0.3s;
+        }
+
+        .project-img img:hover {
+            transform: scale(1.05);
+        }
+
+        /* Testimonials Section */
+        .testimonials {
+            background: #f1f4f8;
+            padding: 60px 20px;
+            text-align: center;
+        }
+
+        .testimonial-grid {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            gap: 30px;
+        }
+
+        .testimonial-card {
+            background: white;
+            padding: 30px;
+            border-radius: 8px;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.03);
+            text-align: left;
+        }
+
+        .testimonial-card p {
+            font-style: italic;
+            color: #555;
+            font-size: 14px;
+            margin-bottom: 20px;
+        }
+
+        .client-info {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+        }
+
+        .client-info img {
+            width: 45px;
+            height: 45px;
+            border-radius: 50%;
+            object-fit: cover;
+        }
+
+        .client-info h5 {
+            font-size: 14px;
+            color: #222;
+        }
+
+        /* Footer */
+        footer {
+            background: #111;
+            color: white;
+            padding: 50px 20px 20px;
+        }
+
+        .footer-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            flex-wrap: wrap;
+            gap: 30px;
+            border-bottom: 1px solid #333;
+            padding-bottom: 30px;
+        }
+
+        .footer-col h3 {
+            font-size: 20px;
+            margin-bottom: 15px;
+        }
+
+        .footer-col p, .footer-col ul {
+            font-size: 14px;
+            color: #aaa;
+            list-style: none;
+        }
+
+        .footer-col ul li {
+            margin-bottom: 8px;
+        }
+
+        .footer-col ul li a {
+            color: #aaa;
+            text-decoration: none;
+            transition: 0.3s;
+        }
+
+        .footer-col ul li a:hover {
+            color: white;
+        }
+
+        .footer-bottom {
+            max-width: 1200px;
+            margin: 20px auto 0;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            font-size: 13px;
+            color: #888;
+        }
+
+        .social-icons {
+            display: flex;
+            gap: 15px;
+        }
+
+        .social-icons a {
+            color: white;
+            background: #222;
+            width: 32px;
+            height: 32px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 50%;
+            transition: 0.3s;
+        }
+
+        .social-icons a:hover {
+            background: #0056b3;
+        }
+
+        /* Responsive */
+        @media(max-width: 768px) {
+            .nav-links {
+                display: none;
+            }
+            .hero-text h1 {
+                font-size: 28px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Header / Navbar -->
+    <header>
+        <div class="nav-container">
+            <div class="logo">
+                <i class="fas fa-desktop"></i> Unique <span>Computer</span>
+            </div>
+            <ul class="nav-links">
+                <li><a href="#">হোম</a></li>
+                <li><a href="#services">সেবাসমূহ</a></li>
+                <li><a href="#portfolio">পোর্টফোলিও</a></li>
+                <li><a href="#about">আমাদের সম্পর্কে</a></li>
+                <li><a href="#contact">যোগাযোগ</a></li>
+                <li><a href="#contact" class="quote-btn">কোটেট নিন</a></li>
+            </ul>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-container">
+            <div class="hero-text">
+                <h1>আপনার কম্পিউটার ও প্রিন্টিং পার্টনার: কনসেপ্ট থেকে সৃষ্টি।</h1>
+                <p>উন্নত মানের আদুনিক মেশিনারি দিয়ে প্রিন্টিং ও ব্রান্ডিং এবং অনলাইন ফর্ম ফিলাপের জন্য আপনার বিশ্বস্ত প্রতিষ্ঠান </p>
+                <div class="hero-btns">
+                    <a href="#contact" class="btn-primary">ফ্রি কোটেশন নিন</a>
+                    <a href="#services" class="btn-outline">সেবাসমূহ দেখুন</a>
+                </div>
+            </div>
+            <div class="hero-image-box">
+                <img src="https://images.unsplash.com/photo-1542744094-3a31243324d0?auto=format&fit=crop&w=500&q=80" alt="Unique Computer Workspace">
+                <h4 style="margin-top: 10px; font-size: 15px;">প্রফেশানল এর সাথে আপনার ব্যবসা ও ব্রাক্তি গত অনলাইন সেবা হোক নিখুত ও নির্ভুল</h4>
+            </div>
+        </div>
+    </section>
+
+    <!-- Core Services -->
+    <h2 class="section-title" id="services">আমাদের মূল সেবাসমূহ</h2>
+    <div class="services-grid">
+        <div class="service-card">
+            <i class="fas fa-laptop-code"></i>
+            <h3>প্রিন্টিং ও পাবলিকেশন </h3>
+            <p>  A1,A2,A3,A4,A5 Printing 
+                Mouja Map, Khatiyan, Land Document , High Court Order. 
+                Business Cards, Brochures, Flyers
+                Book, Question paper   </p>
+            <a href="#" class="learn-more">আরও জানুন <i class="fas fa-chevron-right" style="font-size: 10px;"></i></a>
+        </div>
+        <div class="service-card">
+            <i class="fas fa-file-alt"></i>
+            <h3>OMR শিট ডিজাইন</h3>
+            <p>শিক্ষার্থীদের পরীক্ষার জন্য নির্ভুল ও প্রফেশনাল OMR শিট প্রিন্টিং ও ডিজাইন।</p>
+            <a href="#" class="learn-more">আরও জানুন <i class="fas fa-chevron-right" style="font-size: 10px;"></i></a>
+        </div>
+        <div class="service-card">
+            <i class="fas fa-print"></i>
+            <h3>লার্জ ফরম্যাট প্রিন্ট</h3>
+            <p>ব্যানার, সাইনেজ, পোস্টার এবং ট্রেড শো ডিসপ্লে প্রিন্টিং সুবিধা।</p>
+            <a href="#" class="learn-more">আরও জানুন <i class="fas fa-chevron-right" style="font-size: 10px;"></i></a>
+        </div>
+        <div class="service-card">
+            <i class="fas fa-paint-brush"></i>
+            <h3>ডিজাইন সার্ভিস</h3>
+            <p>লোগো, ব্র্যান্ডিং, গ্রাফিক্স এবং আকর্ষণীয় লেআউট ডিজাইন।</p>
+            <a href="#" class="learn-more">আরও জানুন <i class="fas fa-chevron-right" style="font-size: 10px;"></i></a>
+        </div>
+        <div class="service-card">
+            <i class="fas fa-tools"></i>
+            <h3>রিপেয়ারিং সার্ভিসিং</h3>
+            <p>দক্ষ টেকনিশিয়ান দ্বারা যেকোনো আইটি পণ্যের দ্রুত মেরামত সেবা।</p>
+            <a href="#" class="learn-more">আরও জানুন <i class="fas fa-chevron-right" style="font-size: 10px;"></i></a>
+        </div>
+        <div class="service-card">
+            <i class="fas fa-microchip"></i>
+            <h3>আইটি এক্সেসরিজ</h3>
+            <p>প্রয়োজনীয় কম্পিউটার যন্ত্রাংশ ও টেক এক্সেসরিজ পাইকারি ও খুচরা মূল্যে।</p>
+            <a href="#" class="learn-more">আরও জানুন <i class="fas fa-chevron-right" style="font-size: 10px;"></i></a>
+        </div>
+    </div>
+
+    <!-- Why Choose Us -->
+    <section class="why-us">
+        <h2 class="section-title" style="margin-top: 0;">কেন আমাদের বেছে নেবেন?</h2>
+        <div class="features-grid">
+            <div class="feature-item">
+                <i class="fas fa-award"></i>
+                <h4>অসাধারণ মান</h4>
+                <p>উজ্জ্বল রঙ ও প্রিমিয়াম পেপার/উপকরণ ব্যবহার।</p>
+            </div>
+            <div class="feature-item">
+                <i class="fas fa-clock"></i>
+                <h4>দ্রুত ডেলিভারি</h4>
+                <p>নির্দিষ্ট সময়ের মধ্যে সঠিক সেবা প্রদান।</p>
+            </div>
+            <div class="feature-item">
+                <i class="fas fa-users"></i>
+                <h4>দক্ষ টিম</h4>
+                <p>অভিজ্ঞ ও পেশাদার সাপোর্ট এবং পরামর্শ।</p>
+            </div>
+            <div class="feature-item">
+                <i class="fas fa-laptop-house"></i>
+                <h4>আধুনিক প্রযুক্তি</h4>
+                <p>সর্বাধুনিক যন্ত্রপাতি ও শতভাগ নিখুঁত কাজ।</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Featured Projects -->
+    <h2 class="section-title" id="portfolio">নির্বাচিত প্রজেক্টসমূহ</h2>
+    <div class="projects-grid">
+        <div class="project-img">
+            <img src="https://images.unsplash.com/photo-1544716278-ca5e3f4abd8c?auto=format&fit=crop&w=500&q=80" alt="Project 1">
+        </div>
+        <div class="project-img">
+            <img src="https://images.unsplash.com/photo-1586075010923-2dd4570fb338?auto=format&fit=crop&w=500&q=80" alt="Project 2">
+        </div>
+        <div class="project-img">
+            <img src="https://images.unsplash.com/photo-1626785774573-4b799315345d?auto=format&fit=crop&w=500&q=80" alt="Project 3">
+        </div>
+        <div class="project-img">
+            <img src="https://images.unsplash.com/photo-1572044162444-ad60f128bdea?auto=format&fit=crop&w=500&q=80" alt="Project 4">
+        </div>
+    </div>
+
+    <!-- Testimonials -->
+    <section class="testimonials">
+        <h2 class="section-title" style="margin-top: 0;">গ্রাহকদের মতামত</h2>
+        <div class="testimonial-grid">
+            <div class="testimonial-card">
+                <p>“Unique Computer থেকে আমাদের প্রতিষ্ঠানের OMR শিট ও প্রিন্টিংয়ের কাজ করিয়েছি। মান খুবই চমৎকার!”</p>
+                <div class="client-info">
+                    <img src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=100&q=80" alt="Client">
+                    <div>
+                        <h5>রহিম উদ্দিন</h5>
+                        <span style="font-size: 12px; color: #777;">শিক্ষক</span>
+                    </div>
+                </div>
+            </div>
+            <div class="testimonial-card">
+                <p>“খুব কম সময়ে নিখুঁতভাবে ল্যাপটপ সার্ভিসিং করে দিয়েছে। তাদের সেবা সত্যিই প্রশংসনীয়।”</p>
+                <div class="client-info">
+                    <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=100&q=80" alt="Client">
+                    <div>
+                        <h5>জাকির হোসেন</h5>
+                        <span style="font-size: 12px; color: #777;">ব্যবসায়ী</span>
+                    </div>
+                </div>
+            </div>
+            <div class="testimonial-card">
+                <p>“ফরিদপুরে কম্পিউটার এক্সেসরিজ এবং প্রিন্টিংয়ের জন্য এটি অন্যতম সেরা একটি বিশ্বস্ত প্রতিষ্ঠান।”</p>
+                <div class="client-info">
+                    <img src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?auto=format&fit=crop&w=100&q=80" alt="Client">
+                    <div>
+                        <h5>তানভীর আহমেদ</h5>
+                        <span style="font-size: 12px; color: #777;">ফ্রিল্যান্সার</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer id="contact">
+        <div class="footer-container">
+            <div class="footer-col" style="max-width: 300px;">
+                <h3><i class="fas fa-desktop"></i> Unique Computer</h3>
+                <p>আপনার প্রযুক্তিগত সহায়তা এবং প্রফেশনাল প্রিন্টিং ও OMR শিট সলিউশনের বিশ্বস্ত ঠিকানা।</p>
+            </div>
+            <div class="footer-col">
+                <h3>যোগাযোগ</h3>
+                <p><i class="fas fa-map-marker-alt"></i> ফরিদপুর সদর, ফরিদপুর</p>
+                <p><i class="fas fa-phone"></i> ০১৮xxxxxxxx</p>
+                <p><i class="fas fa-envelope"></i> info@uniquecomputer.com</p>
+            </div>
+            <div class="footer-col">
+                <h3>দ্রুত লিংক</h3>
+                <ul>
+                    <li><a href="#">হোম</a></li>
+                    <li><a href="#services">সেবাসমূহ</a></li>
+                    <li><a href="#portfolio">পোর্টফোলিও</a></li>
+                    <li><a href="#about">আমাদের সম্পর্কে</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h3>আইনি তথ্য</h3>
+                <ul>
+                    <li><a href="#">শর্তাবলী</a></li>
+                    <li><a href="#">গোপনীয়তা নীতি</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; ২০২৬ Unique Computer. সর্বস্বত্ব সংরক্ষিত।</p>
+            <div class="social-icons">
+                <a href="#"><i class="fab fa-facebook-f"></i></a>
+                <a href="#"><i class="fab fa-instagram"></i></a>
+                <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                <a href="#"><i class="fab fa-twitter"></i></a>
+            </div>
+        </div>
+    </footer>
+
+</body>
+</html>
